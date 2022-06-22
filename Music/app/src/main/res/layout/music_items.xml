@@ -5,31 +5,31 @@
     android:background="#ffffff"
     android:layout_marginTop="5dp"
     android:id="@+id/audioItem">
-    
+
     <ImageView
+        android:id="@+id/musicImg"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:id="@+id/musicImg"
-        android:src="@mipmap/ic_launcher_round"
-        android:padding="5dp"/>
+        android:padding="5dp"
+        android:src="@mipmap/ic_launcher_round" />
 
     <TextView
+        android:id="@+id/fileName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="File Name"
-        android:layout_toEndOf="@+id/musicImg"
-        android:layout_marginStart="10dp"
         android:layout_centerVertical="true"
-        android:textColor="@color/black"
+        android:layout_marginStart="10dp"
         android:layout_toStartOf="@+id/menuMore"
-        android:id="@+id/fileName"/>
+        android:layout_toEndOf="@+id/musicImg"
+        android:text="File Name"
+        android:textColor="@color/black" />
 
     <ImageView
+        android:id="@+id/menuMore"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:id="@+id/menuMore"
-        android:src="@drawable/ic_more"
         android:layout_alignParentEnd="true"
-        android:padding="10dp"/>
+        android:padding="10dp"
+        android:src="@drawable/ic_more" />
 
 </RelativeLayout>

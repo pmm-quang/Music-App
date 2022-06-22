@@ -33,17 +33,16 @@ public class MainActivity extends AppCompatActivity {
 
     public static final int REQUEST_CODE = 1;
     public static ArrayList<Song> songs;
-    public static boolean shuffle = false, repeat = false;
+    public static boolean shuffle = false;
+    public static boolean repeat = false;
     public static ArrayList<Song> albums = new ArrayList<>();
-    private String MY_SORT_PREF = "SortOrder";
+    private String MY_SORT_PREFERENCES = "SortOrder";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         permission();
-
     }
     private void initViewPager() {
         ViewPager2 viewPager = findViewById(R.id.viewPager);
@@ -61,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                    REQUEST_CODE);
         } else {
-//            Toast.makeText(this, "Permission Granted !", Toast.LENGTH_LONG).show();
+//          Toast.makeText(this, "Permission Granted !", Toast.LENGTH_LONG).show();
             songs = getAllAudio(this);
             initViewPager();
         }
@@ -84,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public  ArrayList<Song> getAllAudio(Context context) {
-        SharedPreferences preferences = getSharedPreferences(MY_SORT_PREF, MODE_PRIVATE);
+        SharedPreferences preferences = getSharedPreferences(MY_SORT_PREFERENCES, MODE_PRIVATE);
         String sortOrder = preferences.getString("sorting", "sortByName");
         ArrayList<String> duplicate = new ArrayList<>();
         albums.clear();
@@ -178,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        SharedPreferences.Editor editor = getSharedPreferences(MY_SORT_PREF, MODE_PRIVATE).edit();
+        SharedPreferences.Editor editor = getSharedPreferences(MY_SORT_PREFERENCES, MODE_PRIVATE).edit();
         switch (item.getItemId()) {
             case R.id.by_name:
                 editor.putString("sorting", "sortByName");

@@ -9,23 +9,23 @@
 
 
     <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/purple_500"
-        android:id="@+id/tabLayout"
+        android:background="@color/special_dark"
+        app:tabIndicator="@drawable/tab_indicator"
+        app:tabIndicatorColor="#FFE4C4"
         app:tabIndicatorFullWidth="true"
         app:tabIndicatorGravity="center"
-        app:tabTextColor="@color/white"
         app:tabIndicatorHeight="40dp"
-        app:tabIndicatorColor="#FFE4C4"
-        app:tabIndicator="@drawable/tab_indicator"/>
+        app:tabTextColor="@color/white" />
 
     <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/viewPager"
         android:layout_below="@+id/tabLayout"
-        android:layout_alignBottom="@+id/fragBottomPlayer"/>
+        android:layout_alignBottom="@+id/fragBottomPlayer" />
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

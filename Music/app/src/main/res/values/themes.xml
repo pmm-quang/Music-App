@@ -2,9 +2,11 @@
     <!-- Base application theme. -->
     <style name="Theme.Music" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">@color/special_black</item>
+        <item name="colorPrimaryVariant">@color/special_dark</item>
+        <item name="colorOnPrimary">@color/special_white</item>
+        <item name="android:colorAccent">@color/special_teal</item>
+        <item name="android:textColor">@color/special_white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>

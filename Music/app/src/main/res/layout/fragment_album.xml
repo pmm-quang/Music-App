@@ -6,10 +6,10 @@
     tools:context=".fragment.AlbumFragment">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/recyclerView"
-        android:background="@color/design_default_color_primary_dark"/>
+        android:background="@color/special_dark" />
 
 
 

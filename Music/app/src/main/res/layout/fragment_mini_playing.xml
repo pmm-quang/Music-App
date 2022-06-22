@@ -7,61 +7,63 @@
     tools:context=".fragment.MiniPlayingFragment">
 
     <RelativeLayout
+        android:id="@+id/cartBottomPlayer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/cartBottomPlayer"
-        android:background="@color/design_default_color_primary_dark"
+        android:background="@color/special_dark"
         android:padding="5dp">
+
         <ImageView
+            android:id="@+id/bottomAlbumArt"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/music"
-            android:id="@+id/bottomAlbumArt"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop"
+            android:src="@drawable/music" />
+
         <ImageView
+            android:id="@+id/skipNextBottom"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:id="@+id/skipNextBottom"
-            android:src="@drawable/ic_skip_next"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="10dp"/>
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_skip_next" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/miniPlayPauseBottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_play"
-            android:layout_toStartOf="@id/skipNextBottom"
-            android:layout_marginEnd="10dp"
-            app:fabSize="mini"
             android:layout_centerVertical="true"
-            android:id="@+id/miniPlayPauseBottom"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/songNameBottom"
-            android:text="Song Name Is Here"
-            android:textColor="#fff"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="15dp"
-            android:layout_toEndOf="@+id/bottomAlbumArt"
-            android:textSize="18sp"
-            android:maxLines="1"
-            android:layout_toStartOf="@id/miniPlayPauseBottom"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/songArtistBottom"
-            android:text="Artist Name Is Here"
-            android:textColor="#fff"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="15dp"
-            android:layout_toEndOf="@+id/bottomAlbumArt"
-            android:layout_below="@+id/songNameBottom"
-            android:textSize="16sp"
-            android:maxLines="1"
-            android:layout_toStartOf="@id/miniPlayPauseBottom"/>/>
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/skipNextBottom"
+            android:backgroundTint="@color/special_teal"
+            android:src="@drawable/ic_play"
+            app:fabSize="mini" />
 
+        <TextView
+            android:id="@+id/songNameBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_toStartOf="@id/miniPlayPauseBottom"
+            android:layout_toEndOf="@+id/bottomAlbumArt"
+            android:maxLines="1"
+            android:text="Song Name Is Here"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/songArtistBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/songNameBottom"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_toStartOf="@id/miniPlayPauseBottom"
+            android:layout_toEndOf="@+id/bottomAlbumArt"
+            android:maxLines="1"
+            android:text="Artist Name Is Here"
+            android:textSize="16sp" />
 
 
     </RelativeLayout>
